@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Categorizing NGC4438</title>
+    </head>
+    <body style="background-color:lavender">
+    <center>
+        <header>
+            <div class="topnav">
+                <a class="active" href="index.html">Home</a> |
+                <a href="data_acquisition.html">Data Acquisition</a> |
+                <a href="data_analysis.html">Data Analysis and Results</a> |
+                <a href="references.html">References</a>
+            </div>
+        </header>
+        <h2>Data Acquisition</h2>
+        <h3>Objects</h3>
+        <p>Five galaxies were chosen to represent the different types of galaxies used in the color gradient analysis: <br>
+        </p>
+        <p>NGC4435 and NGC4438 - Barred Lenticular (SB0, left) and Target (right)</p> 
+        <img src="eyesbetter.png" width="255" height="320">
+        <p>M101 - Grand Design Spiral (Sc)</p>
+         <img src="M101.png" width="293" height="315">
+        <p>M91 - Barred Spiral (SBb) </p>
+        <img src="M91.png" width="284" height="220">
+        <p>
+        M86 - Elliptical (E3)</p>
+            <img src="M86.png" width="324" height="222">
+        <p>M84 - Lenticular (S0)</p>
+        <img src="M84.png" width="213.6" height="300">
+        <p>
+            Originally, I wanted to focus on the Markarian Chain, but the spiral galaxies in the chain are
+            all edge-on. I found that it would be best for my analysis for the galaxies to be face-on. 
+            This is the reason I used M101 and M91. All 6 of the galaxies are in the Virgo Cluster.
+        </p>
+        <p>All images were taken by me.</p>
+        <br>
+        <h3>CCD/Telescope Setup</h3>
+        <table border="2.5" cellpadding="10" cellspacing="0">
+            <tr>
+                <td>Mirror Diameter</td>
+                <td>.8 m</td>
+            </tr>
+            <tr>
+                <td>CCD Dimensions</td>
+                <td>2080x2048</td>
+            </tr>
+            <tr>
+                <td>Binning</td>
+                <td>2x2</td>
+            </tr>
+            <tr>
+                <td>Bits per pixel</td>
+                <td>16</td>
+            </tr>
+            <tr>
+                <td>Gain</td>
+                <td>1.60</td>
+            </tr>
+            <tr>
+                <td>Read Noise</td>
+                <td>5.87</td>
+            </tr>
+            <tr>
+                <td>Airmass</td>
+                <td>13.37</td>
+            </tr>
+        </table><br>
+        <h3>Observations</h3>
+        <p>The images were taken remotely using the .8 m telescope at <a href="https://mcdonaldobservatory.org/" target="_blank">McDonald Observatory</a>. </p>
+        <p>There were a total of 51 images taken. However, not all frames were used for analysis
+            due to pointing glitches, being out of focus, cosmic rays, and over saturation. All six objects had 3 exposures taken in each of the B, V, R, and H&alpha; filters at varying exposure times.</p>
+        <!--
+            <table border="2.5" cellpadding="10" cellspacing="0">
+            <tr>
+                <th>Object</th>
+                <th>Filter</th>
+                <th colspan="3">Exposure Times</th>
+            </tr>
+            <tr>
+                <td rowspan="4">M101</td>
+                <td>B</td>
+                <td>60 s</td>
+                <td>100 s</td>
+                <td>100 s</td>
+            </tr>
+            <tr>
+                <td>R</td>
+                <td>60 s</TD>
+                <td>100 s</td>
+                <td>100 s</td>
+            </tr>
+            <tr>
+                <td>V</td>
+                <td>60 s</td>
+                <td>100 s</td>
+                <td>120 s</td>
+            </tr>
+            <tr>
+                <td>H&alpha;</td>
+                <td>100 s</td>
+                <td>180 s</td>
+                <td>100 s</td>
+            </tr>
+            <tr>
+                <td rowspan="4">M91</td>
+                <td>B</td>
+                <td>70 s</td>
+                <td>70 s</td>
+                <td>70 s</td>
+            </tr>
+            <tr>
+                <td>R</td>
+                <td>70 s</TD>
+                <td>70 s</td>
+                <td>140 s</td>
+            </tr>
+            <tr>
+                <td>V</td>
+                <td>140 s</td>
+                <td>140 s</td>
+                <td>140 s</td>
+            </tr>
+            <tr>
+                <td>H&alpha;</td>
+                <td>100 s</td>
+                <td>120 s</td>
+                <td>120 s</td>
+            </tr>
+            <tr>
+                <td rowspan="4">M86<br>and<br>M84</td>
+                <td>B</td>
+                <td>30 s</td>
+                <td>30 s</td>
+                <td>30 s</td>
+            </tr>
+            <tr>
+                <td>R</td>
+                <td>130 s</TD>
+                <td>100 s</td>
+                <td>120 s</td>
+            </tr>
+            <tr>
+                <td>V</td>
+                <td>60 s</td>
+                <td>40 s</td>
+                <td>40 s</td>
+            </tr>
+            <tr>
+                <td>H&alpha;</td>
+                <td>60 s</td>
+                <td>100 s</td>
+                <td>100 s</td>
+            </tr>
+            <tr>
+                <td rowspan="4">NGC4435 <br> and <br> NGC4438</td>
+                <td>B</td>
+                <td>30 s</td>
+                <td>30 s</td>
+                <td>30 s</td>
+            </tr>
+            <tr>
+                <td>R</td>
+                <td>100 s</TD>
+                <td>130 s</td>
+                <td>120 s</td>
+            </tr>
+            <tr>
+                <td>V</td>
+                <td>60 s</td>
+                <td>40 s</td>
+                <td>40 s</td>
+            </tr>
+            <tr>
+                <td>H&alpha;</td>
+                <td>60 s</td>
+                <td>100 s</td>
+                <td>100 s</td>
+            </tr>
+            --->
+        </table>
+        <p>
+            M101 and M91 were captured on their own. M86, M84, NGC4435, and NGC4438 were all captured in one frame as they are
+            all apart of the Markarian Chain.
+        </p>
+        <br>
+        <h3>Data Reduction</h3>
+        <p>
+            A bias image was created from 10 exposures, and a flat, also created from 10 exposures, was created for each filter. 
+            The composite bias and flats needed to be converted to 2x2 binning as they were taken with 1x1 binning.
+            This was done using blkavg on IRAF. 
+        </p>
+        <p> 
+            Each image was flat-fielded, bias-subtracted, and trimmed using IRAF. 
+            The median and final image for each object in all four filters was compiled and edited using python.
+            The images were aligned and scaled for exposure time using a python program my professor made.
+        </p>
+        <br>
+    </center>
+    </body>
+</html>

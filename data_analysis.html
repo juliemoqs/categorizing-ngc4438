@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Categorizing NGC4438</title>
+    </head>
+    <body style="background-color:lavender">
+        <center>
+        <header>
+            <div class="topnav">
+                <a class="active" href="index.html">Home</a> |
+                <a href="data_acquisition.html">Data Acquisition</a> |
+                <a href="data_analysis.html">Data Analysis and Results</a> |
+                <a href="references.html">References</a>
+            </div>
+        </header>
+        <h2>Data Analysis</h2>
+            <p>
+               The images had to be cropped for every galaxy
+               to the size of the galaxy in b-v, b-r, and b-h&alpha;.
+               <table border="2.5" cellpadding="10" cellspacing="0">
+                <tr>
+                    <td><b>Object</b></td>
+                    <td>NGC4438</td>
+                    <td>NGC4435</td>
+                    <td>M101</td>
+                    <td>M91</td>
+                    <td>M86</td>
+                    <td>M84</td>
+                </tr>
+                <tr>
+                    <td><b>Crop Size</b></td>
+                    <td>165x251</td>
+                    <td>72x67</td>
+                    <td>401x401</td>
+                    <td>325x325</td>
+                    <td>401x401</td>
+                    <td>106x231</td>
+                </tr>
+            </table>
+            <p>
+                The images were then subtracted to create the b-v, b-r, and b-h&alpha; bandpasses. 
+                The IRAF program gradient was used to calculate the gradient of the band passes.
+                The gradient, in this case, is the two dimensional derivative:
+            </p>
+            <h4>
+               &Del;F(x,y) = &part;F/&part;x + &part;F/&part;y
+            </h4>
+            <p>
+                Finally, to create my histograms, I used imhist to listout values from z1=-5 to z2=5 with a binwidth=.25, 
+                and then graphed these values using Jupyter Notebook. 
+                I decided to graph count vs gradient instead of gradient vs radius as the shape
+                of NGC4438 is no where near to circular. It's spiral-like wings makes calculating the gradient very difficult. 
+            </p>
+                <br>
+        <h2>Results</h2>
+            <p>
+                <img src="gradbv.jpeg" width="450" height="350">
+                <img src="gradbr.jpeg" width="450" height="350">
+                <img src="gradbha.jpeg" width="450" height="350">
+            </p>
+            <p>
+                The counts are very different for each of the galaxies due to the individual cropping sizes. 
+                The cropping size changed based on the size of the object. The counts do not depend on the exposure times as they were normalized during the aligning process.
+                Since I am only looking at the gradient, the different counts do not affect my analysis. 
+            </p>
+            <p>
+                A positive gradient indicates that the first wavelength is increasing more than the second wavelength.
+                A negative gradient indicates that the first wavelength is decreasing more than the second wavelength. 
+                However, the gradient does not indicate anything specific about the colors individually. 
+            </p>
+            <p>
+                To have conclusive results, I would need to gather data 
+                from another galaxy in each category to be able to use a 
+                &chi;<sup>2</sup> test to see if the gradient data is statistically
+                significant. Thus, I am not able to accurately categorize NGC4438.
+            </p>
+            <p>
+                However, I still decided to speculate which line NGC4438 was most similar to for each bandpass. 
+                In the B-V gradient graph, the two spiral galaxies had maxima at a positive value,
+                while the elliptical and lenticular galaxies had maxima at a negative value. NGC4438
+                had its maxima in the positive similar to the spiral galaxies. 
+                In the B-R and B-H&alpha;gradient graphs, I was not really able to find a pattern like I did in the B-V gradient graph.
+                Thus, I can speculate that NGC4438 may have stronger spiral characteristics than elliptical one, which can be seen by its wings, but I cannot 
+                make any conclusions.
+            </p>
+        <br>
+    </center>
+    </body>
+</html>
